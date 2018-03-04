@@ -10,7 +10,7 @@ pickPaper.addEventListener('click', function() {playerPick('paper'); });
 pickScissors.addEventListener('click', function() {playerPick('scissors'); });
         
        
-var gameState = 'notStarted',     //started/nonstarted/ended  
+var gameState = 'notStarted',
 player = {
     name: '',
     score: 0
@@ -62,7 +62,7 @@ function newGame() {
     playerResultElem.innerHTML = "Player score";
               
     player.name = prompt('Please enter your name', 'imię gracza');
-    if (player.name!= '') {
+    if (player.name !== '' && typeof player.name !== 'object') {
          setGamePoints();
         gameState = 'started';
         setGameElements();
